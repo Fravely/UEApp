@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.ueapp.presentation.auth.LoginScreen
+import com.example.ueapp.presentation.navigation.AppNavGraph
 import com.example.ueapp.ui.theme.UEAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,7 +21,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             UEAppTheme {
-                LoginScreen()
+                AppNavGraph()
             }
         }
     }
