@@ -50,10 +50,22 @@ fun LoginScreen(navController: NavController){
         Spacer(modifier = Modifier.height(16.dp))
 
         Button(onClick = {
-            /*TODO*/
+            if(email.isNotBlank()
+                && password.isNotBlank()){
+                navController.navigate("home")
+            }
         }, modifier = Modifier.fillMaxWidth()
             ) {
             Text("Inicar sesion")
+        }
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        Button(onClick = {
+            navController.navigate("register")},
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text("Registrarse")
         }
     }
 }
